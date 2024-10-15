@@ -1,0 +1,151 @@
+/* Основные стили для body */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #b784db;
+}
+
+/* Стили для конверта */
+.envelope {
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+/* Задняя часть конверта */
+.back {
+  position: absolute;
+  right: -55px;
+  width: 250px;
+  height: 200px;
+  background: #6247aa;
+}
+
+.block  {
+  display: flex;
+align-items: center;
+}
+
+/* Передняя часть конверта */
+.front {
+  position: relative;
+  border-right: 145px solid #815ac0;
+  border-top: 110px solid transparent;
+  border-bottom: 110px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 56px;
+  z-index: 3;
+}
+.front:before {
+  content: "";
+  position: absolute;
+  border-left: 145px solid #815ac0;
+  border-top: 110px solid transparent;
+  border-bottom: 110px solid transparent;
+  height: 0;
+  width: 0;
+  top: -110px;
+  left: -135px;
+}
+.front:after {
+  content: "";
+  position: absolute;
+  border-bottom: 115px solid #7251b5;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -135px;
+}
+
+
+
+/* Анимация открытия */
+.envelope.opened .top {
+  transform: rotateX(160deg);
+}
+
+/* Письмо внутри конверта */
+.letter {
+  position: absolute;
+  background: white;
+  width: 255px;
+  height: 210px;
+  top: -10px;
+  left: -65px;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+
+/* Анимация для письма */
+.envelope.opened .letter {
+  transform: translateY(-120px);
+}
+
+/* Текстовые элементы */
+.text {
+position: absolute;
+  text-align: center;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: black;
+  position: relative;
+}
+
+.text1{
+  position: absolute;
+  text-align: center;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #fff;
+text-align: center;
+}
+/* Сердце */
+.heart {
+  background-color: red;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding 0.8s linear infinite;
+}
+@keyframes untoldcoding {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  top: -40px;
+  border-radius: 50px;
+}
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  right: -40px;
+  border-radius: 50px;
+}
+

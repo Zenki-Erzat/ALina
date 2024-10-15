@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Алина</title>
+  <link rel="stylesheet" href="Style3.css">
+</head>
+<body>
+
+
+
+  <div class="envelope" id="envelope">
+    <div class="block">
+    <div class="letter">
+      <div class="heart"></div>
+      <div class="text">
+        <a href="new.html">Нажми</a>
+
+        <p>
+          Это текст читает самый<br>
+          Красивый красивый девушка в мире <br>
+          Хочу тебе сказать доброе утро <br>
+          
+          
+        </p>
+
+      </div>
+      
+    </div>
+  <div class="back"></div>
+    <div class="front"></div>
+    <div class="shadow"></div>
+  </div>
+    <div class="text1">
+     Нажми на конверт!
+    </div>
+  </div>
+
+  <script>
+    // JavaScript для обработки клика
+    document.getElementById('envelope').addEventListener('click', function() {
+      // Переключение класса "opened" при каждом клике
+      this.classList.toggle('opened');
+    });
+  </script>
+</body>
+</html>
